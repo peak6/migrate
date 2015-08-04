@@ -1,19 +1,21 @@
 # migrate
 
 [![Build Status](https://travis-ci.org/mattes/migrate.svg?branch=master)](https://travis-ci.org/mattes/migrate)
-[![GoDoc](https://godoc.org/github.com/mattes/migrate?status.svg)](https://godoc.org/github.com/mattes/migrate)
+[![GoDoc](https://godoc.org/github.com/peak6/migrate?status.svg)](https://godoc.org/github.com/peak6/migrate)
 
 A migration helper written in Go. Use it in your existing Golang code 
 or run commands via the CLI. 
 
+__Note: This is a fork of github.com/mattes/migrate, but with the non-postgresql drivers removed to simplify the dependencies.
+
 ```
-GoCode   import github.com/mattes/migrate/migrate
-CLI      go get -u github.com/mattes/migrate
+GoCode   import github.com/peak6/migrate/migrate
+CLI      go get -u github.com/peak6/migrate
 ```
 
 __Features__
 
-* Super easy to implement [Driver interface](http://godoc.org/github.com/mattes/migrate/driver#Driver).
+* Super easy to implement [Driver interface](http://godoc.org/github.com/peak6/migrate/driver#Driver).
 * Gracefully quit running migrations on ``^C``.
 * No magic search paths routines, no hard-coded config files.
 * CLI is build on top of the ``migrate package``.
@@ -21,20 +23,18 @@ __Features__
 
 ## Available Drivers
 
- * [PostgreSQL](https://github.com/mattes/migrate/tree/master/driver/postgres)
- * [Cassandra](https://github.com/mattes/migrate/tree/master/driver/cassandra)
- * [SQLite](https://github.com/mattes/migrate/tree/master/driver/sqlite3)
- * [MySQL](https://github.com/mattes/migrate/tree/master/driver/mysql) ([experimental](https://github.com/mattes/migrate/issues/1#issuecomment-58728186))
+ * [PostgreSQL](https://github.com/peak6/migrate/tree/master/driver/postgres)
+issues/1#issuecomment-58728186))
  * Bash (planned)
 
-Need another driver? Just implement the [Driver interface](http://godoc.org/github.com/mattes/migrate/driver#Driver) and open a PR.
+Need another driver? Just implement the [Driver interface](http://godoc.org/github.com/peak6/migrate/driver#Driver) and open a PR.
 
 
 ## Usage from Terminal
 
 ```bash
 # install
-go get github.com/mattes/migrate
+go get github.com/peak6/migrate
 
 # create new migration file in path
 migrate -url driver://url -path ./migrations create migration_file_xyz
@@ -73,10 +73,10 @@ migrate -url driver://url -path ./migrations goto v
 
 ## Usage in Go
 
-See GoDoc here: http://godoc.org/github.com/mattes/migrate/migrate
+See GoDoc here: http://godoc.org/github.com/peak6/migrate/migrate
 
 ```go
-import "github.com/mattes/migrate/migrate"
+import "github.com/peak6/migrate/migrate"
 
 // use synchronous versions of migration functions ...
 allErrors, ok := migrate.UpSync("driver://url", "./path")

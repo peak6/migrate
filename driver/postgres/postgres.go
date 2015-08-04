@@ -6,8 +6,8 @@ import (
 	"errors"
 	"fmt"
 	"github.com/lib/pq"
-	"github.com/mattes/migrate/file"
-	"github.com/mattes/migrate/migrate/direction"
+	"github.com/peak6/migrate/file"
+	"github.com/peak6/migrate/migrate/direction"
 	"strconv"
 )
 
