@@ -6,7 +6,7 @@
 A migration helper written in Go. Use it in your existing Golang code 
 or run commands via the CLI. 
 
-__Note: This is a fork of github.com/mattes/migrate, but with the non-postgresql drivers removed to simplify the dependencies.
+## Note: This is a fork of github.com/mattes/migrate, but with the non-postgresql drivers removed to simplify the dependencies.
 
 ```
 GoCode   import github.com/peak6/migrate/migrate
