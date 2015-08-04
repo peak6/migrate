@@ -1,6 +1,6 @@
 # migrate
 
-[![Build Status](https://travis-ci.org/peak6/migrate.svg?branch=master)](https://travis-ci.org/mattes/migrate)
+[![Build Status](https://travis-ci.org/peak6/migrate.svg?branch=master)](https://travis-ci.org/peak6/migrate)
 [![GoDoc](https://godoc.org/github.com/peak6/migrate?status.svg)](https://godoc.org/github.com/peak6/migrate)
 
 A migration helper written in Go. Use it in your existing Golang code 
